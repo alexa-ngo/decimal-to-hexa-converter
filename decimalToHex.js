@@ -62,5 +62,5 @@ function hexToDecimal(input) {
 //console.log(hexToDecimal('EDFC12312FD')); // Expected: 16354180797181
 //console.log(hexToDecimal('FF')); // Expected: 255
 //console.log(hexToDecimal('1230982ABC')); // Expected: 78124690108
-//console.log(hexToDecimal('00AA1')); // Expected: 2721s
+//console.log(hexToDecimal('00AA1')); // Expected: 2721
 
