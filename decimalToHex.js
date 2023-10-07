@@ -1,18 +1,14 @@
 // Decimal to Hexadecimal converter
 
-function decimalToHex(userInput, sourceBase) {
-
-    if (sourceBase >= 17) {
-        return 'Sorry, this program can only go up to base16.';
-    }
+function decimalToHex(userInput) {
 
     let result = "";
     let quotient = userInput;
 
     while (quotient !== 0) {
 
-        const remainder = quotient % sourceBase;
-        quotient = Math.trunc(quotient / sourceBase);
+        const remainder = quotient % 16;
+        quotient = Math.trunc(quotient / 16);
 
         if (remainder < 10) {
             result = remainder + result;
@@ -40,17 +36,14 @@ function decimalToHex(userInput, sourceBase) {
     return result;
 }
 
-//console.log(decimalToHex(922337203685477, 16)); // up to base 17
-
-
-
+//console.log(decimalToHex(922337203685477)); // Expected: 346DC5D638865
+//console.log(decimalToHex(31293)); // Expected: 7A3D
+//console.log(decimalToHex(192028930)); // Expected: B722102
+//console.log(decimalToHex(32321293)); // Expected: 1ED2F0D
+//console.log(decimalToHex(113123213293));  // Expected: 1A56AB3FED
 
 // Hexadecimal to Decimal converter
 function hexToDecimal(input) {
-
-    if (input >= 17) {
-        return 'Sorry, this program can only go up to base16.';
-    }
 
     const hex = input.toLowerCase();
 
@@ -65,5 +58,9 @@ function hexToDecimal(input) {
 }
 
 //console.log(hexToDecimal('ABC3942A'));  // Expected: 2881721386
-console.log(hexToDecimal('32423F'));  // Expected: 3293759
+//console.log(hexToDecimal('32423F'));  // Expected: 3293759
+//console.log(hexToDecimal('EDFC12312FD')); // Expected: 16354180797181
+//console.log(hexToDecimal('FF')); // Expected: 255
+//console.log(hexToDecimal('1230982ABC')); // Expected: 78124690108
+//console.log(hexToDecimal('00AA1')); // Expected: 2721s
 
