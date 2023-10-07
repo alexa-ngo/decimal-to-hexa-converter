@@ -40,4 +40,30 @@ function decimalToHex(userInput, sourceBase) {
     return result;
 }
 
-//console.log(decimalToHex(922337203685477, 17)); // up to base 17
+//console.log(decimalToHex(922337203685477, 16)); // up to base 17
+
+
+
+
+// Hexadecimal to Decimal converter
+function hexToDecimal(input) {
+
+    if (input >= 17) {
+        return 'Sorry, this program can only go up to base16.';
+    }
+
+    const hex = input.toLowerCase();
+
+    let result = 0;
+    let exponent;
+
+    for (let i = 0; i < hex.length; i++) {
+        exponent = "0123456789abcdef".indexOf(hex[i]);
+        result = result * 16 + exponent;
+    }
+    return result;
+}
+
+//console.log(hexToDecimal('ABC3942A'));  // Expected: 2881721386
+console.log(hexToDecimal('32423F'));  // Expected: 3293759
+
