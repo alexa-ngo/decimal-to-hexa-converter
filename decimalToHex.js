@@ -34,7 +34,7 @@ function decimalToHex(userInput) {
         }
     }
     return result;
-}
+};
 
 //console.log(decimalToHex(922337203685477)); // Expected: 346DC5D638865
 //console.log(decimalToHex(31293)); // Expected: 7A3D
@@ -43,16 +43,17 @@ function decimalToHex(userInput) {
 //console.log(decimalToHex(113123213293));  // Expected: 1A56AB3FED
 
 // Hexadecimal to Decimal converter
+
 function hexToDecimal(input) {
 
     const hex = input.toLowerCase();
 
     let result = 0;
-    let exponent;
+    let value;
 
     for (let i = 0; i < hex.length; i++) {
-        exponent = "0123456789abcdef".indexOf(hex[i]);
-        result = result * 16 + exponent;
+        value = "0123456789abcdef".indexOf(hex.charAt(i));
+        result = result * 16 + value;   // Multiply each digit of the hex number with its corresponding power of 16 and sum.
     }
     return result;
 }
@@ -63,4 +64,4 @@ function hexToDecimal(input) {
 //console.log(hexToDecimal('FF')); // Expected: 255
 //console.log(hexToDecimal('1230982ABC')); // Expected: 78124690108
 //console.log(hexToDecimal('00AA1')); // Expected: 2721
-
+//console.log(hexToDecimal("21A")); // Expected: 538

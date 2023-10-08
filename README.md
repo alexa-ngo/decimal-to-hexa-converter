@@ -1,2 +1,1 @@
-# decimal-to-hexa-converter
-This program converts a number from any base up to base 16 into hexadecimal.
+This program has two functions. The first function called Decimal to Hex which converts a Decimal to Hex. While the second function called Hex to Decimal converts a Hex input to decimal.
